@@ -16,8 +16,6 @@ const inter2 = Inter({
     subsets: ['latin'] 
 })
 
-const myFont = localFont({ src: './fonts/Vellago.ttf' })
-
 
 export default function ComingSoon() {
 
