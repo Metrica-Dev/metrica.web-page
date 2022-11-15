@@ -30,6 +30,8 @@
     align-items: center;
 
     padding-bottom: 1rem;
+
+    color: white;
 }   
 
 
@@ -46,6 +48,7 @@
 }
 
 .title {
+    text-align: center;
     font-size: 8rem;
 }
 
@@ -83,3 +86,63 @@
 .social {
 
 }
+
+
+
+@media only screen and (max-width: 900px) {
+    .title {
+      font-size: 6rem;
+      text-align: center;
+    }
+
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+
+  }
+
+
+
+  @media only screen and (max-width: 400px) {
+    .title {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+
+    .info {
+        text-align: center;
+        font-size: .6rem;
+    }
+
+    .mail_input {
+        width: 200px;
+        height: 60px;
+        background-color: white;
+        color: gray;
+        padding-left: 20px;
+        border: none;
+        border-radius: 100px;
+    }
+    
+    .mail_button {
+        width: 100px;
+        height: 60px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 100px;
+    }
+  }

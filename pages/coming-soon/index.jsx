@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import localFont from '@next/font/local'
 
+import { motion } from "framer-motion"
 
 const inter = Inter({
     weight: '700',
@@ -19,17 +20,33 @@ const inter2 = Inter({
 
 export default function ComingSoon() {
 
+    const Click = (e) => {
+        console.log("ciao")
+        e.preventDefaul()
+
+    }
+
 
     return (  
         <div className={styles.main}>
             
 
-            <p className={styles.logo}>
+            <motion.p 
+                className={styles.logo}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+            >
                 metrica
-            </p>
+            </motion.p>
 
 
-            <div className={styles.center}>
+            <motion.div 
+                className={styles.center}
+                initial={{ opacity: 0 , y: -100}}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+            >
 
                 <div className={inter.className}>
                     
@@ -50,19 +67,24 @@ export default function ComingSoon() {
                     
                 </div>
 
-                <form action="post" className={styles.mail_form}>
+                <form action='/coming-soon' className={styles.mail_form} onSubmit={Click}>
 
                     <input className={styles.mail_input} type="mail" require placeholder='Email Address'></input>
                     <button type='submit' className={styles.mail_button}> Sing up</button>
 
                 </form>
 
-            </div>
+            </motion.div>
 
 
-            <div className={styles.social}>
+            <motion.div 
+                className={styles.social}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeOut", duration: 2 }}
+            >
                <a href='https://twitter.com/_metrica'><Image src="/img/social/twitter.png" alt="Twitter" width={44} height={44} /></a> 
-            </div>
+            </motion.div>
 
 
         </div>
