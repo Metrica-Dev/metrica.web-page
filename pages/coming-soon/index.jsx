@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 
 import { Inter } from '@next/font/google'
-import localFont from '@next/font/local'
 
 import { motion } from "framer-motion"
 
